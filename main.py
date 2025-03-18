@@ -96,16 +96,16 @@ def main():
     time_thr = time.perf_counter() - start_thr
 
     with open("output.txt", "w") as f:
-        f.write(f"Послідовний результат: {result_seq} (час: {time_seq:.5f} сек)\n")
+        f.write(f"Послідовний результат: {result_seq} (час: {time_seq:.5f} с.)\n")
         f.write(
-            f"Паралельний результат (multiprocessing): {result_par} (час: {time_par:.5f} сек, процеси: {num_processes})\n")
+            f"Паралельний результат (multiprocessing): {result_par} (час: {time_par:.5f} с., процеси: {num_processes})\n")
         f.write(
-            f"Паралельний результат (multithreading): {result_thr} (час: {time_thr:.5f} сек, потоки: {num_threads})\n")
+            f"Паралельний результат (multithreading): {result_thr} (час: {time_thr:.5f} с., потоки: {num_threads})\n")
 
     print("Результати збережені у output.txt")
     print(f"Послідовний результат: {result_seq} (час: {time_seq:.5f} сек)")
-    print(f"Паралельний результат (multiprocessing): {result_par} (час: {time_par:.5f} сек, процеси: {num_processes})")
-    print(f"Паралельний результат (multithreading): {result_thr} (час: {time_thr:.5f} сек, потоки: {num_threads})")
+    print(f"Паралельний результат (multiprocessing): {result_par} (час: {time_par:.5f} с., процеси: {num_processes})")
+    print(f"Паралельний результат (multithreading): {result_thr} (час: {time_thr:.5f} с., потоки: {num_threads})")
 
 
 if __name__ == "__main__":
